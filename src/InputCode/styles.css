@@ -1,0 +1,36 @@
+.input-code {
+  display: inline-flex;
+  position: relative;
+  justify-content: space-between
+}
+
+.input-code__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.input-code__symbol {
+  width: 20px;
+  height: 1.125rem;
+  padding: .5rem;
+  background-color: #fff;
+  border-radius: 3px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.input-code__symbol:not(:first-of-type) {
+  margin-left: 5px
+}
+
+.input-code__input:focus ~ .input-code__symbol {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 200, .5);
+}
+
+.input-code__input:disabled ~ .input-code__symbol {
+  background-color: #f0f0f0;
+}
